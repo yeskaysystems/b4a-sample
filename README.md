@@ -26,8 +26,8 @@ You need add `Golgle Play Services` and `android-support-v4` to your project in 
 
 ###Add Pushe library
 
-1. Download [Pushe library](http://static.pushe.co/sdk/pushe-0.8.2.zip)
-2. Download [PusheWrapper.jar]() and [PusheWrapper.xml]() and copy both of them to `Additional Library`
+1. Download [Pushe library](https://static.pushe.co/sdk/pushe-0.8.2-b4a.zip)
+2. Copy `PusheWrapper.jar` and `PusheWrapper.xml` from extracted folder to `Additional Library`
 3. Right click on Libreries Window in your B4A software and refresh libreries then select `Pushe-Wrapper`
 4. In `Main` class add `Dim p1 As PusheLib` to `Sub Globals`
 5. In `Main` class add `p1.initialize()` to `Activity Create`
