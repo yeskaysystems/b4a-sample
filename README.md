@@ -13,7 +13,42 @@ To see our demo app or its wiki page you may take a look at:
 
 ## Pushe Installation in a Basic4Android Project
 
-...
+You need add `Golgle Play Services` and `android-support-v4` to your project in order to use Pushe service.
+###Add Google Play Services
+
+1. Download [Google Play Services](http://static.pushe.co/useful-links/google-play-services/eclipse/google-play-services_lib.zip) library and extarct
+2. Copy `Google-Play-Services.jar` from extracted folder and paste it into B4A `Additional Library` (it should be some where like: C:\Program Files\Anywhere Software\Basic4android\Libraries)
+
+###Add Android-Support-V4.jar
+
+1. Download [Android-Support-V4.jar](http://static.pushe.co/useful-links/android-support-v4.jar)
+2. Copy downloaded file into `Additional Library` (it should be some where like: C:\Program Files\Anywhere Software\Basic4android\Libraries)
+
+###Add Pushe library
+
+1. Download [Pushe library](http://static.pushe.co/sdk/pushe-0.8.2.zip)
+2. Download [PusheWrapper.jar]() and [PusheWrapper.xml]() and copy both of them to `Additional Library`
+3. Right click on Libreries Window in your B4A software and refresh libreries then select `Pushe-Wrapper`
+4. In `Main` class add `Dim p1 As PusheLib` to `Sub Globals`
+5. In `Main` class add `p1.initialize()` to `Activity Create`
+
+###Adding Resources
+
+Add below codes to your `Project Attributes` in your `Main` class:
+
+`#AdditionalRes:  google play service library res folder path  , com.google.android.gms`
+
+`#AdditionalRes:  library res folder path, co.ronash.pushe`
+
+Replace downloaded folder pathes instead of top pathes.
+
+###Changes in AndroidManifest.xml
+
+1. Add your application in your [Pushe Panel](http://pushe.co/panel/platform/application/add/) with the same package name as you defined in B4A `Build Configuration`
+2. Download proper Manifest file from panel and add content to project's `AndroidManifest`. You can find it in: `Project>Manifest Editor`
+
+###Run
+Your project is ready to run. Go to `File` menu and select `Build & Run`
 
 ## More Info
 For detailed documentations visit http://docs.pushe.co
