@@ -342,20 +342,17 @@ public static void killProgram() {
 BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
-public co.ronash.pushe.b4awrapper.PusheWrapper _p = null;
+public co.ronash.b4awrapper.pushewrapp _p = null;
 public co.ronash.pushesampleb4a.starter _starter = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";
 RDebugUtils.currentLine=131072;
  //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=131075;
- //BA.debugLineNum = 131075;BA.debugLine="p.initialize(True)";
-mostCurrent._p.initialize(mostCurrent.activityBA,anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=131076;
- //BA.debugLineNum = 131076;BA.debugLine="p.subscribe(\"cat\")";
-mostCurrent._p.subscribe(mostCurrent.activityBA,"cat");
-RDebugUtils.currentLine=131078;
- //BA.debugLineNum = 131078;BA.debugLine="End Sub";
+RDebugUtils.currentLine=131074;
+ //BA.debugLineNum = 131074;BA.debugLine="p.initialize()";
+mostCurrent._p.initialize(mostCurrent.activityBA);
+RDebugUtils.currentLine=131082;
+ //BA.debugLineNum = 131082;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{

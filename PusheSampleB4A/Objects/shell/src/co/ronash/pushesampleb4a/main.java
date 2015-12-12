@@ -53,7 +53,7 @@ public boolean isSingleton() {
 		return pcBA;
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
-public static RemoteObject _p = RemoteObject.declareNull("co.ronash.pushe.b4awrapper.PusheWrapper");
+public static RemoteObject _p = RemoteObject.declareNull("co.ronash.b4awrapper.pushewrapp");
 public static co.ronash.pushesampleb4a.starter _starter = null;
   public Object[] GetGlobals() {
 		return new Object[] {"Activity",main.mostCurrent._activity,"p",main.mostCurrent._p,"Starter",Debug.moduleToString(co.ronash.pushesampleb4a.starter.class)};
