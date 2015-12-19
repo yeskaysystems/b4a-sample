@@ -34,11 +34,11 @@ You need add `Golgle Play Services` and `android-support-v4` to your project in 
 
 ###Adding Resources
 
-Add below codes to your `Project Attributes` in your `Main` class:
+Add (or change) below codes to your `Project Attributes` in your `Main` class:
 
-`#AdditionalRes:  google play service library res folder path  , com.google.android.gms`
+`#AdditionalRes:  **REPLACE YOUR google play service library res folder PATH HERE**  , com.google.android.gms`
 
-`#AdditionalRes:  library res folder path, co.ronash.pushe`
+`#AdditionalRes:  **REPLACE YOUR library res folder PATH HERE** , co.ronash.pushe`
 
 Replace downloaded folder pathes instead of top pathes.
 
