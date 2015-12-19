@@ -40,8 +40,6 @@ Add (or change) below codes to your `Project Attributes` in your `Main` class:
 
 `#AdditionalRes:  **REPLACE YOUR library res folder PATH HERE** , co.ronash.pushe`
 
-Replace downloaded folder pathes instead of top pathes.
-
 ###Changes in AndroidManifest.xml
 
 1. Add your application in your [Pushe Panel](http://pushe.co/panel/platform/application/add/) with the same package name as you defined in B4A `Build Configuration`
