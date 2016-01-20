@@ -18,7 +18,8 @@ Library2=pusheplugin091
 	#SupportedOrientations: unspecified
 	#CanInstallToExternalStorage: False
 	'add Pushe and google-play-services res files to project,  be careful, the address is different in your PC
-	#AdditionalRes: C:\android-sdk\extras\google\google_play_services\libproject\google-play-services_lib\res, com.google.android.gms
+	#AdditionalRes: C:\workspace\eclipse\kepler\google-play-services-gcm-7.5.0\res, com.google.android.gms
+	#AdditionalRes: C:\workspace\eclipse\kepler\google-play-services-base-7.5.0\res, com.google.android.gms
 	#AdditionalRes: C:\workspace\b4a\pushe-stuff\0.9.1\android-lib-0.9.1\res, co.ronash.pushe
 	
 #End Region
