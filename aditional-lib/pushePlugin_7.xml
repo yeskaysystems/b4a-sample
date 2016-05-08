@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>co.ronash.pushe.wrapper.PusheWrapper</name>
+        <shortname>Pushe</shortname>
+        <owner>process</owner>
+        <permission>com.google.android.c2dm.permission.RECEIVE</permission>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.WAKE_LOCK</permission>
+        <permission>android.permission.RECEIVE_BOOT_COMPLETED</permission>
+        <method>
+            <name>subscribe</name>
+            <comment>Subscribe to tag
+ba: 
+tagName: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>tagName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>unSubscribe</name>
+            <comment>unsubscribe from tag
+ba: 
+tagName: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>tagName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>showDialog</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>co.ronash.pushe.wrapper.PusheWrapper.PusheB4AUtil</name>
+        <shortname>PusheB4AUtil</shortname>
+        <owner>process</owner>
+        <method>
+            <name>getPusheJsonMsg</name>
+            <comment>Extract user's Json message from input
+pIntent: 
+Return type: @return:custom json content of message if exists</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>pIntent</name>
+                <type>android.content.Intent</type>
+            </parameter>
+        </method>
+    </class>
+    <version>0.1</version>
+    <dependsOn>android-support-v4</dependsOn>
+    <dependsOn>pushe-0.10.0</dependsOn>
+    <dependsOn>google-play-services-base</dependsOn>
+    <dependsOn>google-play-services-gcm</dependsOn>
+    <dependsOn>sentry-android-1.2.2</dependsOn>
+</root>
