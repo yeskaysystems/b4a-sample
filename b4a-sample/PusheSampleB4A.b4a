@@ -8,7 +8,7 @@ IconFile=
 NumberOfFiles=0
 NumberOfLibraries=2
 Library1=core
-Library2=pusheplugin_7
+Library2=pusheplugin
 @EndOfDesignText@
 'dont forget that b4a app your package name must be same as package name that created in pushe panel 
 #Region  Project Attributes 
@@ -19,8 +19,7 @@ Library2=pusheplugin_7
 	#SupportedOrientations: unspecified
 	#CanInstallToExternalStorage: False
 	'add Pushe and google-play-services res files to project,  be careful, the address is different in your PC
-	#AdditionalRes: ..\..\aditional-res\Google-play-service-low-size\google-play-services-gcm-7.5.0\res, com.google.android.gms
-	#AdditionalRes: ..\..\aditional-res\Google-play-service-low-size\google-play-services-base-7.5.0\res, com.google.android.gms
+	#AdditionalRes: ..\..\aditional-res\google-play-services-base-7.5.0\res, com.google.android.gms
 	#AdditionalRes: ..\..\aditional-res\pushe-0.10.0-b4a\res, co.ronash.pushe
 	
 #End Region

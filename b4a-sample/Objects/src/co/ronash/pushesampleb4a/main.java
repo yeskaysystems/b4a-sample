@@ -318,31 +318,31 @@ public static boolean isAnyActivityVisible() {
 vis = vis | (main.mostCurrent != null);
 return vis;}
 public static String  _activity_create(boolean _firsttime) throws Exception{
- //BA.debugLineNum = 37;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 39;BA.debugLine="p.initialize(True)";
+ //BA.debugLineNum = 36;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 38;BA.debugLine="p.initialize(True)";
 mostCurrent._p.initialize(processBA,anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 42;BA.debugLine="p.subscribe(\"cat\")";
+ //BA.debugLineNum = 41;BA.debugLine="p.subscribe(\"cat\")";
 mostCurrent._p.subscribe(processBA,"cat");
- //BA.debugLineNum = 45;BA.debugLine="p.unsubscribe(\"cat\")";
+ //BA.debugLineNum = 44;BA.debugLine="p.unsubscribe(\"cat\")";
 mostCurrent._p.unSubscribe(processBA,"cat");
- //BA.debugLineNum = 47;BA.debugLine="End Sub";
+ //BA.debugLineNum = 46;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 53;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 55;BA.debugLine="End Sub";
+ //BA.debugLineNum = 52;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 54;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 49;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 51;BA.debugLine="End Sub";
+ //BA.debugLineNum = 48;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 50;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
- //BA.debugLineNum = 27;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 32;BA.debugLine="Dim p As Pushe";
+ //BA.debugLineNum = 26;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 31;BA.debugLine="Dim p As Pushe";
 mostCurrent._p = new co.ronash.pushe.wrapper.PusheWrapper();
- //BA.debugLineNum = 35;BA.debugLine="End Sub";
+ //BA.debugLineNum = 34;BA.debugLine="End Sub";
 return "";
 }
 
@@ -360,8 +360,8 @@ pushejsonservice._process_globals();
 		}
     }
 }public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 21;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 25;BA.debugLine="End Sub";
+ //BA.debugLineNum = 20;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 24;BA.debugLine="End Sub";
 return "";
 }
 }
