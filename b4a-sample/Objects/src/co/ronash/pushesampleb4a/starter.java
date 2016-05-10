@@ -27,7 +27,7 @@ public class starter extends android.app.Service {
 	public void onCreate() {
         mostCurrent = this;
         if (processBA == null) {
-		    processBA = new BA(this, null, null, "co.ronash.pushesampleb4a", "co.ronash.pushesampleb4a.starter");
+		    processBA = new anywheresoftware.b4a.ShellBA(this, null, null, "co.ronash.pushesampleb4a", "co.ronash.pushesampleb4a.starter");
             if (BA.isShellModeRuntimeCheck(processBA)) {
                 processBA.raiseEvent2(null, true, "SHELL", false);
 		    }
@@ -110,27 +110,38 @@ public class starter extends android.app.Service {
 		processBA.setActivityPaused(true);
         processBA.runHook("ondestroy", this, null);
 	}
+
 public anywheresoftware.b4a.keywords.Common __c = null;
 public co.ronash.pushesampleb4a.main _main = null;
 public co.ronash.pushesampleb4a.pushejsonservice _pushejsonservice = null;
-public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 10;BA.debugLine="End Sub";
-return "";
-}
 public static String  _service_create() throws Exception{
- //BA.debugLineNum = 12;BA.debugLine="Sub Service_Create";
- //BA.debugLineNum = 16;BA.debugLine="End Sub";
+RDebugUtils.currentModule="starter";
+if (Debug.shouldDelegate("service_create"))
+	return (String) Debug.delegate(processBA, "service_create", null);
+RDebugUtils.currentLine=393216;
+ //BA.debugLineNum = 393216;BA.debugLine="Sub Service_Create";
+RDebugUtils.currentLine=393220;
+ //BA.debugLineNum = 393220;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_destroy() throws Exception{
- //BA.debugLineNum = 22;BA.debugLine="Sub Service_Destroy";
- //BA.debugLineNum = 24;BA.debugLine="End Sub";
+RDebugUtils.currentModule="starter";
+if (Debug.shouldDelegate("service_destroy"))
+	return (String) Debug.delegate(processBA, "service_destroy", null);
+RDebugUtils.currentLine=524288;
+ //BA.debugLineNum = 524288;BA.debugLine="Sub Service_Destroy";
+RDebugUtils.currentLine=524290;
+ //BA.debugLineNum = 524290;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_start(anywheresoftware.b4a.objects.IntentWrapper _startingintent) throws Exception{
- //BA.debugLineNum = 18;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
- //BA.debugLineNum = 20;BA.debugLine="End Sub";
+RDebugUtils.currentModule="starter";
+if (Debug.shouldDelegate("service_start"))
+	return (String) Debug.delegate(processBA, "service_start", new Object[] {_startingintent});
+RDebugUtils.currentLine=458752;
+ //BA.debugLineNum = 458752;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
+RDebugUtils.currentLine=458754;
+ //BA.debugLineNum = 458754;BA.debugLine="End Sub";
 return "";
 }
 }
