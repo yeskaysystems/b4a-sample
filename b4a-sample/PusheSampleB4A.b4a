@@ -11,16 +11,16 @@ Library1=core
 Library2=pusheplugin
 @EndOfDesignText@
 'dont forget that b4a app your package name must be same as package name that created in pushe panel 
-#Region  Project Attributes 
+#Region Project Attributes 
 	#ApplicationLabel: PusheSampleB4A
-	#VersionCode: 10000
-	#VersionName: 0.10.0
+	#VersionCode: 10001
+	#VersionName: 0.10.1
 	'SupportedOrientations possible values: unspecified, landscape or portrait.
 	#SupportedOrientations: unspecified
 	#CanInstallToExternalStorage: False
-	'add Pushe and google-play-services res files to project,  be careful, the address is different in your PC
+	
 	#AdditionalRes: ..\..\aditional-res\google-play-services-base-7.5.0\res, com.google.android.gms
-	#AdditionalRes: ..\..\aditional-res\pushe-0.10.0-b4a\res, co.ronash.pushe
+	#AdditionalRes: ..\..\aditional-res\pushe-0.10.1-b4a\res, co.ronash.pushe
 	
 #End Region
 
@@ -47,7 +47,7 @@ End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	'call initialize to start pushe
-	p.initialize(True)
+	p.initialize()
 
 End Sub
 

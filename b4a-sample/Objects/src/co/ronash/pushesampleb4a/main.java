@@ -32,7 +32,7 @@ public class main extends Activity implements B4AActivity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (isFirst) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "co.ronash.pushesampleb4a", "co.ronash.pushesampleb4a.main");
+			processBA = new BA(this.getApplicationContext(), null, null, "co.ronash.pushesampleb4a", "co.ronash.pushesampleb4a.main");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -308,75 +308,56 @@ public class main extends Activity implements B4AActivity{
 		processBA.raiseEvent2(null, true, "globals", false, (Object[])null);
 	}
 
+public anywheresoftware.b4a.keywords.Common __c = null;
+public co.ronash.pushe.wrapper.PusheWrapper _p = null;
+public co.ronash.pushesampleb4a.starter _starter = null;
+public co.ronash.pushesampleb4a.pushejsonservice _pushejsonservice = null;
 
+public static boolean isAnyActivityVisible() {
+    boolean vis = false;
+vis = vis | (main.mostCurrent != null);
+return vis;}
+public static String  _activity_create(boolean _firsttime) throws Exception{
+ //BA.debugLineNum = 36;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 38;BA.debugLine="p.initialize()";
+mostCurrent._p.initialize(processBA);
+ //BA.debugLineNum = 40;BA.debugLine="End Sub";
+return "";
+}
+public static String  _activity_pause(boolean _userclosed) throws Exception{
+ //BA.debugLineNum = 46;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 48;BA.debugLine="End Sub";
+return "";
+}
+public static String  _activity_resume() throws Exception{
+ //BA.debugLineNum = 42;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 44;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 26;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 31;BA.debugLine="Dim p As Pushe";
+mostCurrent._p = new co.ronash.pushe.wrapper.PusheWrapper();
+ //BA.debugLineNum = 34;BA.debugLine="End Sub";
+return "";
+}
 
 public static void initializeProcessGlobals() {
     
     if (main.processGlobalsRun == false) {
 	    main.processGlobalsRun = true;
 		try {
-		        		
+		        main._process_globals();
+starter._process_globals();
+pushejsonservice._process_globals();
+		
         } catch (Exception e) {
 			throw new RuntimeException(e);
 		}
     }
-}
-public static boolean isAnyActivityVisible() {
-    boolean vis = false;
-vis = vis | (main.mostCurrent != null);
-return vis;}
-
-public static void killProgram() {
-     {
-            Activity __a = null;
-            if (main.previousOne != null) {
-				__a = main.previousOne.get();
-			}
-            else {
-                BA ba = main.mostCurrent.processBA.sharedProcessBA.activityBA.get();
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, pushejsonservice.class));
-}
-public anywheresoftware.b4a.keywords.Common __c = null;
-public co.ronash.pushe.wrapper.PusheWrapper _p = null;
-public co.ronash.pushesampleb4a.starter _starter = null;
-public co.ronash.pushesampleb4a.pushejsonservice _pushejsonservice = null;
-public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate("activity_create"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime});
-RDebugUtils.currentLine=131072;
- //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=131074;
- //BA.debugLineNum = 131074;BA.debugLine="p.initialize(True)";
-mostCurrent._p.initialize(processBA,anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=131076;
- //BA.debugLineNum = 131076;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate("activity_pause"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_pause", new Object[] {_userclosed});
-RDebugUtils.currentLine=262144;
- //BA.debugLineNum = 262144;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=262146;
- //BA.debugLineNum = 262146;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate("activity_resume"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null);
-RDebugUtils.currentLine=196608;
- //BA.debugLineNum = 196608;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+}public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 20;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 24;BA.debugLine="End Sub";
 return "";
 }
 }

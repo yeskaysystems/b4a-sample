@@ -10,8 +10,8 @@
         <permission>android.permission.WAKE_LOCK</permission>
         <permission>android.permission.RECEIVE_BOOT_COMPLETED</permission>
         <method>
-            <name>subscribe</name>
-            <comment>Subscribe to tag
+            <name>unSubscribe</name>
+            <comment>unsubscribe from tag
 ba: 
 tagName: </comment>
             <returntype>void</returntype>
@@ -25,8 +25,8 @@ tagName: </comment>
             </parameter>
         </method>
         <method>
-            <name>unSubscribe</name>
-            <comment>unsubscribe from tag
+            <name>subscribe</name>
+            <comment>Subscribe to tag
 ba: 
 tagName: </comment>
             <returntype>void</returntype>
@@ -47,10 +47,6 @@ tagName: </comment>
                 <name>ba</name>
                 <type>anywheresoftware.b4a.BA</type>
             </parameter>
-            <parameter>
-                <name>showDialog</name>
-                <type>boolean</type>
-            </parameter>
         </method>
     </class>
     <class>
@@ -69,9 +65,9 @@ Return type: @return:custom json content of message if exists</comment>
             </parameter>
         </method>
     </class>
-    <version>0.1</version>
+    <version>0.101</version>
     <dependsOn>android-support-v4</dependsOn>
-    <dependsOn>pushe-0.10.0</dependsOn>
+    <dependsOn>pushe-0.10.1</dependsOn>
     <dependsOn>google-play-services-base</dependsOn>
     <dependsOn>google-play-services-gcm</dependsOn>
     <dependsOn>sentry-android-1.2.2</dependsOn>
