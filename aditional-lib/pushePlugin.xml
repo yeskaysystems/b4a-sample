@@ -9,6 +9,7 @@
         <permission>android.permission.INTERNET</permission>
         <permission>android.permission.WAKE_LOCK</permission>
         <permission>android.permission.RECEIVE_BOOT_COMPLETED</permission>
+        <permission>android.permission.READ_PHONE_STATE</permission>
         <method>
             <name>unSubscribe</name>
             <comment>unsubscribe from tag
@@ -57,7 +58,7 @@ tagName: </comment>
             <name>getPusheJsonMsg</name>
             <comment>Extract user's Json message from input
 pIntent: 
-Return type: @return:custom json content of message if exists</comment>
+Return type: @return:custom Json content of message if exists</comment>
             <returntype>java.lang.String</returntype>
             <parameter>
                 <name>pIntent</name>
@@ -65,9 +66,9 @@ Return type: @return:custom json content of message if exists</comment>
             </parameter>
         </method>
     </class>
-    <version>0.101</version>
+    <version>0.102</version>
     <dependsOn>android-support-v4</dependsOn>
-    <dependsOn>pushe-0.10.1</dependsOn>
+    <dependsOn>pushe-0.10.2</dependsOn>
     <dependsOn>google-play-services-base</dependsOn>
     <dependsOn>google-play-services-gcm</dependsOn>
     <dependsOn>sentry-android-1.2.2</dependsOn>

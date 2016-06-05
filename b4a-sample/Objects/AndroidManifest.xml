@@ -2,8 +2,8 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="co.ronash.pushesampleb4a"
-	android:versionCode="10001"
-	android:versionName="0.10.1"
+	android:versionCode="10002"
+	android:versionName="0.10.2"
 	android:installLocation="internalOnly">
 	
 	<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="23"/>
@@ -21,12 +21,12 @@
 		<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 		<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-		<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 	<permission android:name="co.ronash.pushesampleb4a.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.WAKE_LOCK"/>
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 	<uses-permission android:name="co.ronash.pushesampleb4a.permission.C2D_MESSAGE"/>
 	<application
 		android:icon="@drawable/icon"
