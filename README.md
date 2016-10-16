@@ -17,7 +17,7 @@ The project is organized in a way that you can use it with minimum efforts. To u
 
 1. First download or clone the project on your computer
 2. Go to `b4a-sample` folder and open the B4A project. 
-3. Select `Tools -> configure Paths` from B4A menu bar and set `Additional Libraries` to `aditional-lib` folder which exists in the root of this project
+3. Select `Tools -> configure Paths` from B4A menu bar and set `Additional Libraries` to `aditional-lib` folder which exists in the root of this project. Alternatively you can copy the content of this folder into your `aditional-lib` folder.
 4. If you `DONT want` to send costum json with your notifications, remove `PusheJsonService` from project via `Project -> Remove Module` also remove below lines to your manifest by selecting `Project -> Manifest Editor`:
 I
 AddManifestText(<permission android:name="$PACKAGE$.permission.C2D_MESSAGE"            android:protectionLevel="signature" />)
