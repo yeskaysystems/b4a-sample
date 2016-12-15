@@ -13,7 +13,7 @@
         <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
         <method>
             <name>unSubscribe</name>
-            <comment>unsubscribe from tag
+            <comment>unsubscribe from a topic (chanel)
 ba: 
 tagName: </comment>
             <returntype>void</returntype>
@@ -28,7 +28,7 @@ tagName: </comment>
         </method>
         <method>
             <name>subscribe</name>
-            <comment>Subscribe to tag
+            <comment>Subscribe to a topic (chanel)
 ba: 
 tagName: </comment>
             <returntype>void</returntype>
@@ -44,6 +44,16 @@ tagName: </comment>
         <method>
             <name>notificationOn</name>
             <comment>make publishing notification on
+ba: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>pusheInitialized</name>
+            <comment>Returns a boolean indicating if pushe is initialized
 ba: </comment>
             <returntype>void</returntype>
             <parameter>
@@ -89,13 +99,13 @@ Return type: @return:custom JSON content of message if exists</comment>
     </class>
     <version>1.0</version>
     <dependsOn>android-support-v4</dependsOn>
-    <dependsOn>pushe-1.0.0.aar</dependsOn>
+    <dependsOn>pushe-1.1.0.aar</dependsOn>
     <dependsOn>google-play-services-base.aar</dependsOn>
     <dependsOn>google-play-services-gcm</dependsOn>
-    <dependsOn>android-job-1.0.13.aar</dependsOn>
-    <dependsOn>cat-1.0.4.aar</dependsOn>
+    <dependsOn>android-job-1.1.3.aar</dependsOn>
+    <dependsOn>cat-1.0.5.aar</dependsOn>
     <dependsOn>google-play-services-basement.aar</dependsOn>
     <dependsOn>google-play-services-iid</dependsOn>
     <dependsOn>google-play-services-tasks</dependsOn>
-    <dependsOn>sentry-android-1.2.2</dependsOn>
+    <dependsOn>sentry-android-1.5.1</dependsOn>
 </root>
