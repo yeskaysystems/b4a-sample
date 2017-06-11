@@ -1,4 +1,4 @@
-﻿Version=6.3
+﻿Version=6.5
 NumberOfModules=2
 Module1=Starter
 Module2=PusheJsonService
@@ -8,13 +8,13 @@ IconFile=
 NumberOfFiles=0
 NumberOfLibraries=2
 Library1=core
-Library2=pusheplugin_v1.2.0
+Library2=pusheplugin_v1.3.0
 @EndOfDesignText@
 'dont forget that b4a app your package name must be same as package name that created in pushe panel 
 #Region Project Attributes 
 	#ApplicationLabel: PusheSampleB4A
-	#VersionCode: 1002000
-	#VersionName: 1.2.0
+	#VersionCode: 1003000
+	#VersionName: 1.3.0
 	'SupportedOrientations possible values: unspecified, landscape or portrait.
 	#SupportedOrientations: unspecified
 	#CanInstallToExternalStorage: False
@@ -44,8 +44,11 @@ End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	'call initialize to start pushe
-	p.initialize()
-
+	p.initialize() 
+	Log("pusheId is :" & p.getPusheId())
+	If p.pusheInitialized() Then 
+		p.sendSimpleNotifToUser("pid_ac70-e04e-3a", "hi", "simple notif from a device")
+    End If
 End Sub
 
 Sub Activity_Resume
