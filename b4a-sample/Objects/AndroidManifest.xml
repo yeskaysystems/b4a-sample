@@ -2,8 +2,8 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="co.ronash.pushesampleb4a"
-	android:versionCode="1003004"
-	android:versionName="1.3.4"
+	android:versionCode="1004000"
+	android:versionName="1.4.0"
 	android:installLocation="internalOnly">
 	
 	<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="23"/>
@@ -40,19 +40,6 @@
 		            android:path="co.ronash.pushesampleb4a"
 		            android:scheme="package" />
 		</intent-filter>
-		</receiver>
-		
-		<receiver
-		    android:name="co.ronash.pushe.receiver.PusheGcmReceiver"
-		    android:exported="true"
-		    android:permission="com.google.android.c2dm.permission.SEND" >
-		    <intent-filter>
-		        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-		        
-		        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-		        
-		        <category android:name="co.ronash.pushesampleb4a" />
-		    </intent-filter>
 		</receiver>
 		
 		<service
@@ -191,6 +178,27 @@
 		    android:name="android.support.FILE_PROVIDER_PATHS"
 		    android:resource="@xml/provider_paths" />
 		</provider>
+		
+		<service
+		android:name="co.ronash.pushe.task.tasks.NetworkConnect"
+		android:permission="android.permission.BIND_JOB_SERVICE" />
+		
+		<service android:name="co.ronash.pushe.receiver.PusheGcmReceiver"
+		android:permission="android.permission.BIND_JOB_SERVICE"
+		/>
+		
+		<receiver
+		    android:name="com.google.android.gms.gcm.GcmReceiver"
+		    android:exported="true"
+		    android:permission="com.google.android.c2dm.permission.SEND" >
+		    <intent-filter>
+		        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+		        
+		        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+		        
+		        <category android:name="co.ronash.pushesampleb4a" />
+		    </intent-filter>
+		</receiver>
 		    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
 		    <meta-data android:name="co.ronash.pushe.token" android:value="PUSHE_76583046756"/>
 		    <meta-data android:name="co.ronash.pushe.cr" android:value="aHR0cDovLzcxOTI5YWQ2ZGEyNjQ4ZDhhMWE5ZDQxNmEwZGRmNWExOjE0ZTM5ZWMyZTE2OTRhNWM4MGNkNzMzYTIyYjlkZmE2QGNhLnB1c2hlLmNvLzQxNDI="/>
