@@ -2,45 +2,21 @@
 <root>
     <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
     <class>
-        <name>co.ronash.pushe.wrapper.PusheWrapper</name>
+        <name>co.ronash.pushe.PusheV1</name>
         <shortname>Pushe</shortname>
         <owner>process</owner>
-        <permission>com.google.android.c2dm.permission.RECEIVE</permission>
-        <permission>android.permission.INTERNET</permission>
-        <permission>android.permission.WAKE_LOCK</permission>
-        <permission>android.permission.RECEIVE_BOOT_COMPLETED</permission>
-        <permission>android.permission.ACCESS_WIFI_STATE</permission>
-        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
-        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
         <method>
-            <name>unSubscribe</name>
-            <comment>unsubscribe from a topic (chanel)
-ba: 
-tagName: </comment>
+            <name>notificationOff</name>
+            <comment></comment>
             <returntype>void</returntype>
             <parameter>
                 <name>ba</name>
                 <type>anywheresoftware.b4a.BA</type>
             </parameter>
-            <parameter>
-                <name>tagName</name>
-                <type>java.lang.String</type>
-            </parameter>
         </method>
         <method>
             <name>createNotificationChannel</name>
-            <comment>Creating custom Notification Channel for android 8+. For lower android version
- call to this method has no effect
-ba: 
-channelId:: String
-channelName:: String
-description:: String
-importance:: int
-enableLight: : boolean
-enableVibration:: boolean
-showBadge:: boolean
-ledColor:: int
-vibrationPattern:: long[]</comment>
+            <comment></comment>
             <returntype>void</returntype>
             <parameter>
                 <name>ba</name>
@@ -84,64 +60,8 @@ vibrationPattern:: long[]</comment>
             </parameter>
         </method>
         <method>
-            <name>sendAdvancedNotifToUser</name>
-            <comment>Sending an advanced notification to another installation of the app by 
- having pusheId of that installation. Notification should be represented as a valid json string
-ba: 
-pusheId: 
-notificationJson: </comment>
-            <returntype>void</returntype>
-            <parameter>
-                <name>ba</name>
-                <type>anywheresoftware.b4a.BA</type>
-            </parameter>
-            <parameter>
-                <name>pusheId</name>
-                <type>java.lang.String</type>
-            </parameter>
-            <parameter>
-                <name>notificationJson</name>
-                <type>java.lang.String</type>
-            </parameter>
-        </method>
-        <method>
-            <name>subscribe</name>
-            <comment>Subscribe to a topic (chanel)
-ba: 
-tagName: </comment>
-            <returntype>void</returntype>
-            <parameter>
-                <name>ba</name>
-                <type>anywheresoftware.b4a.BA</type>
-            </parameter>
-            <parameter>
-                <name>tagName</name>
-                <type>java.lang.String</type>
-            </parameter>
-        </method>
-        <method>
-            <name>removeNotificationChannel</name>
-            <comment>Removing custom Notification Channel for android 8+. For lower android version
- call to this method has no effect
-ba: 
-channelId: : String</comment>
-            <returntype>void</returntype>
-            <parameter>
-                <name>ba</name>
-                <type>anywheresoftware.b4a.BA</type>
-            </parameter>
-            <parameter>
-                <name>channelId</name>
-                <type>java.lang.String</type>
-            </parameter>
-        </method>
-        <method>
             <name>sendCustomJsonToUser</name>
-            <comment>Sending a custom json to another installation of the app by having pusheId 
- of that installation. custom json should be represented as a valid json string
-ba: 
-pusheId: 
-customJson: </comment>
+            <comment></comment>
             <returntype>void</returntype>
             <parameter>
                 <name>ba</name>
@@ -157,20 +77,8 @@ customJson: </comment>
             </parameter>
         </method>
         <method>
-            <name>notificationOn</name>
-            <comment>make publishing notification on
-ba: </comment>
-            <returntype>void</returntype>
-            <parameter>
-                <name>ba</name>
-                <type>anywheresoftware.b4a.BA</type>
-            </parameter>
-        </method>
-        <method>
             <name>getPusheId</name>
-            <comment>Returns pusheId for current installation as a String
-ba: 
-Return type: @return:String</comment>
+            <comment></comment>
             <returntype>java.lang.String</returntype>
             <parameter>
                 <name>ba</name>
@@ -178,13 +86,73 @@ Return type: @return:String</comment>
             </parameter>
         </method>
         <method>
+            <name>subscribe</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>tagName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>notificationOn</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sendAdvancedNotifToUser</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>pusheId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>notificationJson</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>unSubscribe</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>tagName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>removeNotificationChannel</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>channelId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
             <name>sendSimpleNotifToUser</name>
-            <comment>Sending a simple notification with just a title and content to another
- installation of the app by having pusheId of that installation
-ba: 
-pusheId: 
-title: 
-content: </comment>
+            <comment></comment>
             <returntype>void</returntype>
             <parameter>
                 <name>ba</name>
@@ -204,27 +172,6 @@ content: </comment>
             </parameter>
         </method>
         <method>
-            <name>pusheInitialized</name>
-            <comment>Returns a boolean indicating if pushe is initialized
-ba: 
-Return type: @return:boolean</comment>
-            <returntype>boolean</returntype>
-            <parameter>
-                <name>ba</name>
-                <type>anywheresoftware.b4a.BA</type>
-            </parameter>
-        </method>
-        <method>
-            <name>notificationOff</name>
-            <comment>make publishing notification off
-ba: </comment>
-            <returntype>void</returntype>
-            <parameter>
-                <name>ba</name>
-                <type>anywheresoftware.b4a.BA</type>
-            </parameter>
-        </method>
-        <method>
             <name>initialize</name>
             <comment></comment>
             <returntype>void</returntype>
@@ -233,16 +180,25 @@ ba: </comment>
                 <type>anywheresoftware.b4a.BA</type>
             </parameter>
         </method>
+        <method>
+            <name>pusheInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
     </class>
     <class>
-        <name>co.ronash.pushe.wrapper.PusheWrapper.PusheB4AUtil</name>
+        <name>co.ronash.pushe.PusheV1.PusheB4AUtil</name>
         <shortname>PusheB4AUtil</shortname>
         <owner>process</owner>
         <method>
             <name>getPusheJsonMsg</name>
-            <comment>Extract user's JSON message from input
+            <comment>Extract user's Json message from input
 pIntent: 
-Return type: @return:custom JSON content of message if exists</comment>
+Return type: @return:custom Json content of message if exists</comment>
             <returntype>java.lang.String</returntype>
             <parameter>
                 <name>pIntent</name>
@@ -250,20 +206,29 @@ Return type: @return:custom JSON content of message if exists</comment>
             </parameter>
         </method>
     </class>
-    <version>1.34</version>
-    <dependsOn>support-v4</dependsOn>
-    <dependsOn>support-annotations</dependsOn>
-    <dependsOn>support-compat</dependsOn>
-    <dependsOn>support-core-ui</dependsOn>
-    <dependsOn>support-core-utils</dependsOn>
-    <dependsOn>support-fragment</dependsOn>
-    <dependsOn>support-media-compat</dependsOn>
-    <dependsOn>pushe-1.4.0.aar</dependsOn>
-    <dependsOn>play-services-base.aar</dependsOn>
-    <dependsOn>play-services-gcm</dependsOn>
-    <dependsOn>play-services-basement.aar</dependsOn>
-    <dependsOn>play-services-iid</dependsOn>
-    <dependsOn>play-services-tasks</dependsOn>
-    <dependsOn>android-job-1.2.4.aar</dependsOn>
-    <dependsOn>play-services-location</dependsOn>
+    <version>1.63</version>
+	<dependsOn>com.android.support:support-annotations</dependsOn>
+	<dependsOn>com.android.support:support-v4</dependsOn>
+	<dependsOn>com.android.support:support-compat</dependsOn>
+	<dependsOn>com.android.support:support-core-ui</dependsOn>
+	<dependsOn>com.android.support:support-core-utils</dependsOn>
+	<dependsOn>com.android.support:support-fragment</dependsOn>
+	<dependsOn>com.android.support:support-media-compat</dependsOn>
+	<dependsOn>Pushe.aar</dependsOn>
+	
+	<dependsOn>com.google.firebase:firebase-messaging</dependsOn>
+	<dependsOn>com.google.firebase:firebase-iid</dependsOn>
+	<dependsOn>com.google.firebase:firebase-iid-interop</dependsOn>
+	<dependsOn>com.google.firebase:firebase-measurement-connector</dependsOn>
+	
+	<dependsOn>com.google.android.gms:play-services-gcm</dependsOn>
+	<dependsOn>com.google.android.gms:play-services-ads</dependsOn>
+	<dependsOn>com.google.android.gms:play-services-base</dependsOn>
+	<dependsOn>com.google.android.gms:play-services-basement</dependsOn>
+	<dependsOn>com.google.android.gms:play-services-iid</dependsOn>
+	<dependsOn>com.google.android.gms:play-services-tasks</dependsOn>
+	<dependsOn>com.google.android.gms:play-services-stats</dependsOn>
+	<dependsOn>com.google.android.gms:play-services-location</dependsOn>
+	
+	<dependsOn>android-job-1.2.4.aar</dependsOn>
 </root>
